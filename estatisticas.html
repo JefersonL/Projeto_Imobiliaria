@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Imobiliária ImobVida</title>
+  
+  <!-- CSS para estilização do conteúdo -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Bootstrap -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./font-awesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="./font-awesome/css/solid.min.css">
+  <link rel="stylesheet" href="./font-awesome/css/svg-with-js.min.css">
+  
+  <!-- Customização da base do layout (NÃO ALTERAR!!) -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class=" border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        <img src="./img/logo1.21.png" width="200px" height="10%" alt="" class="img-fluid">
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="clientes.html" class="list-group-item list-group-item-action">Clientes<i class="fas fa-user fa-fw float-right p-1"></i></a>
+        <a href="imoveis.html" class="list-group-item list-group-item-action">Imóveis<i class="fas fa-home fa-fw float-right p-1"></i></a>
+        <a href="contrato.html" class="list-group-item list-group-item-action">Contrato<i class="fas fa-file-signature fa-fw float-right p-1"></i></a>
+        <a href="funcionarios.html" class="list-group-item list-group-item-action">Funcionários<i class="fas fa-users fa-fw float-right p-1"></i></a>
+        <a href="agendamento.html" class="list-group-item list-group-item-action">Agendamento<i class="fas fa-calendar-check fa-fw float-right p-1"></i></a>
+        <a href="#" class="list-group-item list-group-item-action active">Estatísticas<i class="fas fa-chart-bar fa-fw float-right p-1"></i></a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <div class="col-6">
+          <button class="btn escdMenu" id="menu-toggle">Esconder Menu</button>
+        </div>
+        <div class="col-6 nav-icons">
+          <div class="log float-right">
+            <a class="btn" href="index.html" role="button">Sair
+              <img src="./img/logout.png" width="20px" alt="">
+            </a>
+          </div>  
+          <div class="pesq float-right">
+            <a class="btn" href="#" role="button">Pesquisa
+              <img src="./img/pesquisa.png" width="20px" alt="">
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!--Conteúdo Inicia Aqui-->
+      <div class="container-fluid ">
+        <h2>Estatísticas</h2>
+        <!-- Botões -->
+        <div class="row mt-4 mx-auto d-flex justify-content-between flex-wrap align-items-center">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked>Bimestral
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option2" autocomplete="off"> Trimestral
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option3" autocomplete="off"> Semestral
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option3" autocomplete="off"> Anual
+            </label>
+          </div>
+          <div class="btn-group btn-group-toggle " data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked>Vendas
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option2" autocomplete="off">Locações
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option3" autocomplete="off">Gastos
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option3" autocomplete="off">Lucros
+            </label>
+          </div>
+          <button type="button" class="btn btn-outline-secondary mr-4">Relatórios</button>
+        </div>
+        <canvas class="my-3 w-90" id="myChart" width="870" height="350"></canvas>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- Canvas(Gráfico) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script>
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["1ª Quinzena", "2ª Quinzena", "3ª Quinzena", "4ª Quinzena"],
+        datasets: [{
+          data: [153, 213, 184, 240, 234, 240, 120],
+          lineTension: 0,
+          backgroundColor: 'transparent',
+          borderColor: '#007bff',
+          borderWidth: 3,
+          color: '#545557',
+          pointBackgroundColor: '#007bff'
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: false,
+            }
+          }]
+        },
+        legend: {
+          display: false,
+        }
+      }
+    });
+  </script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>

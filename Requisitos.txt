@@ -1,0 +1,100 @@
+Requisitos de Sistema Imobiliário
+
+* Cadastro de Clientes
+  - Id Funcionário
+  - Id Cliente
+  - Tipo de pessoa: Jurídica/Física
+  - Nome (Se Jurídica: Nome(Fantasia)/Razão Social)
+  - Sexo(Fisica)
+  - Tipo de serviço: Locação/Compra
+  - CPF(CNPJ) **
+  - RG(Fisica)
+  - Dt.Nascimento(Fisica)
+  - Telefone: Residencial/Celular
+  - E-mail
+  - Profissão(Fisica)
+  - Local de trabalho(Fisica)
+  - Valor:Locação(Mensal)/Compra
+  - Dt.Contratação
+  - Dt.Aquisição(Compra/Locação)
+  - Dt.Validade Contrato
+  - Fiador: Nome/Endereço/CPF/RG/Dt.Nascimento/Telefone/Observações
+
+* Cadastro de Imóveis
+  - Id Funcionário
+  - Id Imóvel
+  - Tipo de pessoa
+  - Nome
+  - Sexo(Fisica)
+  - Tipo de serviço: Locação/Venda ou os 2.
+  - Tipo de Imóvel: Casa/Apartamento/Comercial
+  - CPF(CNPJ) **
+  - RG(Fisica)
+  - Dt.Nascimento(Fisica)
+  - Nº Escritura
+  - Valor IPTU
+  - Valor: Locação/Venda
+  - Endereço: Rua/nº/Bairro/Cidade/CEP/Estado(Se apart. - Andar/Apto/Bloco)
+  - Area do Imóvel: Construida/Total
+  - Idade do Imóvel(Anos)
+  - Atributos do Imóvel: quartos/cozinha/banheiro/suites/garagem/salas/andares/pavimentos
+  - Dt.Inclusão
+  - Fotos Imóvel(Upload)
+  - Observações
+
+* Contrato
+  - Id Funcionário
+  - Id Cliente/Id Imóvel/Id Funcionário(para contrato de funcionário)
+  - Dt.Contrato
+  - Clausulas
+
+* Cadastro de Funcionários
+  - Id Funcionário
+  - Nome
+  - Sexo
+  - Função
+  - Dt.Admissão
+  - Endereço
+  - Dt.Nascimento
+  - CPF
+  - RG
+  - Estado Civil: Solteiro/Casado
+  - Telefone
+  - E-mail
+  *Se Casado*
+  - Nome Conjuge
+  - CPF    //
+  - RG     //
+  - Nº Filhos
+  *Se corretor*
+  - CRECI
+
+* Agendamento
+  - Id Funcionário
+  - Dt.Agendamento
+  - Nome
+  - Endereço
+  - Telefone
+  - E-mail
+  - Observações
+
+* Estatísticas
+  * Relação Bimestral/Trimestral/Semestral/Anual
+    - Vendas feitas
+    - Locações feitas
+    - Gastos
+    - Lucros
+    - Relatórios Completos
+
+Links úteis
+
+* Formulários
+   https://getbootstrap.com.br/docs/4.1/components/forms/
+* Botões
+   https://getbootstrap.com.br/docs/4.1/components/buttons/
+* Espaçamento
+   https://getbootstrap.com.br/docs/4.1/utilities/spacing/
+* Posicionamento
+   https://getbootstrap.com.br/docs/4.1/utilities/position/
+* Alinhamento
+   https://getbootstrap.com.br/docs/4.1/utilities/vertical-align/

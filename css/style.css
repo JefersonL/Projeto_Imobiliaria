@@ -1,0 +1,27 @@
+form {
+    margin: 0.5rem 0.7rem 0 0.7rem;
+}
+.form-group input {
+    border-color: #545557c5;
+}
+.form-group input:focus {
+    box-shadow: none;
+    border-color: rgb(161,13,238);
+}
+.form-group select {
+    border-color: #545557c5;
+}
+.form-group select:focus {
+    box-shadow: none;
+    border-color: rgb(161,13,238);
+}
+.form-group textarea {
+    border-color: #545557c5;
+}
+.form-group textarea:focus {
+    box-shadow: none;
+    border-color: rgb(161,13,238);
+}
+h2 {
+    padding-top: 0.5rem;
+}

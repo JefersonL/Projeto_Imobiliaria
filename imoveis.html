@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Imobiliária ImobVida</title>
+  
+  <!-- CSS para estilização do conteúdo -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Bootstrap -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./font-awesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="./font-awesome/css/solid.min.css">
+  <link rel="stylesheet" href="./font-awesome/css/svg-with-js.min.css">
+  
+  <!-- Customização da base do layout (NÃO ALTERAR!!) -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+  <!-- Links Datepicker-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class=" border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        <img src="./img/logo1.21.png" width="200px" height="10%" alt="" class="img-fluid">
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="clientes.html" class="list-group-item list-group-item-action">Clientes<i class="fas fa-user fa-fw float-right p-1"></i></a>
+        <a href="#" class="list-group-item list-group-item-action active">Imóveis<i class="fas fa-home fa-fw float-right p-1"></i></a>
+        <a href="contrato.html" class="list-group-item list-group-item-action">Contrato<i class="fas fa-file-signature fa-fw float-right p-1"></i></a>
+        <a href="funcionarios.html" class="list-group-item list-group-item-action">Funcionários<i class="fas fa-users fa-fw float-right p-1"></i></a>
+        <a href="agendamento.html" class="list-group-item list-group-item-action">Agendamento<i class="fas fa-calendar-check fa-fw float-right p-1"></i></a>
+        <a href="estatisticas.html" class="list-group-item list-group-item-action">Estatísticas<i class="fas fa-chart-bar fa-fw float-right p-1"></i></a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <div class="col-6">
+          <button class="btn escdMenu" id="menu-toggle">Esconder Menu</button>
+        </div>
+        <div class="col-6 nav-icons">
+          <div class="log float-right">
+            <a class="btn" href="index.html" role="button">Sair
+              <img src="./img/logout.png" width="20px" alt="">
+            </a>
+          </div>  
+          <div class="pesq float-right">
+            <a class="btn" href="#" role="button">Pesquisa
+              <img src="./img/pesquisa.png" width="20px" alt="">
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!--Conteúdo Inicia Aqui-->
+      <div class="container-fluid">
+        <div class="row mx-1">
+          <h2 class="col-md-8">Cadastro de Imóveis</h2>
+          <div class="col-md-4">
+            <button type="button" class="btn btn-success salvar float-right"><i class="fas fa-check"></i>Salvar</button>
+          </div>
+      </div>
+    
+      <form>
+        <div class="form-row row align-items-center">
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control" id="inputFuncId" placeholder="Id Funcionário">
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control" id="inputRealty" placeholder="Id Imóvel">
+          </div>
+          <div class="form-group col-mx-2">
+            <select class="form-control">
+              <option selected>Tipo de Pessoa</option>
+              <option>Física</option>
+              <option>Jurídica</option>
+            </select>
+          </div>
+          <div class="form-group col-mx-1">
+            <select class="form-control">
+              <option selected>Sexo</option>
+              <option>Masculino</option>
+              <option>Feminino</option>
+            </select>
+          </div>
+          <div class="form-group col-md">  
+            <input type="text" class="form-control" placeholder="CPF/CNPJ">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-4">
+            <input type="text" class="form-control" id="inputNome" placeholder="Nome">
+          </div>
+          <div class="form-group col-md-2">
+            <div class="dates">
+              <input type="data-date-format" class="form-control datepicker" placeholder="Dt. Nascimento">
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <input type="text" class="form-control" placeholder="RG">
+          </div>
+          <div class="form-group col-md">
+            <select name="servType" class="form-control" id="">
+              <option selected>Tipo de Serviço</option>
+              <option>Locação</option>
+              <option>Venda</option>
+              <option>Ambos</option>
+            </select>
+          </div>
+        </div>
+          <h4>Dados do Imóvel</h4>
+        <div class="row">
+          <div class="form-group col-md-4">
+            <input type="text" class="form-control" placeholder="Nº Escritura">
+          </div>
+          <div class="form-group col-md">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">R$</div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Valor IPTU">
+            </div>
+          </div>
+          <div class="form-group col-md">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">R$</div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Valor (Locação/Venda)">
+            </div>
+          </div>
+          <div class="form-group col-md">
+            <select class="form-control" id="">
+              <option selected>Tipo de Imóvel</option>
+              <option>Casa</option>
+              <option>Apartamento</option>
+              <option>Comercial</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md">
+            <input type="text" class="form-control" placeholder="Endereço">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-3">
+            <div class="input-group">
+              <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Idade do Imóvel">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Anos</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-md-2">
+            <div class="dates">
+              <input type="data-date-format" class="form-control datepicker" placeholder="Dt. Inclusão">
+            </div>
+          </div>
+          <div class="form-group col-md-2">
+            <div class="input-group">
+              <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Área Construida">
+              <div class="input-group-prepend">
+                <div class="input-group-text">m2</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-md-2">
+            <div class="input-group">
+              <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Área Total">
+              <div class="input-group-prepend">
+                <div class="input-group-text">m2</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-md-3">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="upload">
+              <label class="custom-file-label" for="upload">Fotos do Imóvel</label>
+            </div>
+          </div>
+        </div>
+        <h4>Atributos do Imóvel</h4>  
+        <div class="row">
+          <div class="form-group col-sm">
+            <select class="form-control">
+              <option selected>Quartos</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group col-sm">
+            <select class="form-control">
+              <option selected>Cozinha</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+          <div class="form-group col-sm">
+            <select class="form-control">
+              <option selected>Banheiros</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group col-sm">
+            <select class="form-control">
+              <option selected>Suítes</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">  
+          <div class="form-group col-sm">
+            <select class="form-control">
+              <option selected>Salas</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+          <div class="form-group col-sm">
+            <select class="form-control">
+              <option selected>Andares</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+          <div class="form-group col-sm">
+            <select class="form-control">
+              <option selected>Pavimentos</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+          
+          <div class="form-group col-sm">
+            <select class="form-control">
+              <option selected>Garagem (Vagas)</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label for="Textarea">Observações</label>
+            <textarea class="form-control" id="Textarea" rows="3"></textarea>
+          </div>
+        </div>        
+      </form>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e){
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+  
+  <!--Datepicker Script-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+  <script>
+     $('.datepicker').datepicker({
+        weekStart: 1,
+        daysOfWeekHighlighted: "6,0",
+        autoclose: true,
+        todayHighlight: true,
+      });
+  </script>
+</body>
+</html>

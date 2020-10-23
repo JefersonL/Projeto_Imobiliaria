@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Imobiliária ImobVida</title>
+  
+  <!-- CSS para estilização do conteúdo -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Bootstrap -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./font-awesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="./font-awesome/css/solid.min.css">
+  <link rel="stylesheet" href="./font-awesome/css/svg-with-js.min.css">
+  
+  <!-- Customização da base do layout (NÃO ALTERAR!!) -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+  <!-- Links Datepicker-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class=" border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        <img src="./img/logo1.21.png" width="200px" height="10%" alt="" class="img-fluid">
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="clientes.html" class="list-group-item list-group-item-action">Clientes<i class="fas fa-user fa-fw float-right p-1"></i></a>
+        <a href="imoveis.html" class="list-group-item list-group-item-action">Imóveis<i class="fas fa-home fa-fw float-right p-1"></i></a>
+        <a href="#" class="list-group-item list-group-item-action active">Contrato<i class="fas fa-file-signature fa-fw float-right p-1"></i></a>
+        <a href="funcionarios.html" class="list-group-item list-group-item-action">Funcionários<i class="fas fa-users fa-fw float-right p-1"></i></a>
+        <a href="agendamento.html" class="list-group-item list-group-item-action">Agendamento<i class="fas fa-calendar-check fa-fw float-right p-1"></i></a>
+        <a href="estatisticas.html" class="list-group-item list-group-item-action">Estatísticas<i class="fas fa-chart-bar fa-fw float-right p-1"></i></a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <div class="col-6">
+          <button class="btn escdMenu" id="menu-toggle">Esconder Menu</button>
+        </div>
+        <div class="col-6 nav-icons">
+          <div class="log float-right">
+            <a class="btn" href="index.html" role="button">Sair
+              <img src="./img/logout.png" width="20px" alt="">
+            </a>
+          </div>  
+          <div class="pesq float-right">
+            <a class="btn" href="#" role="button">Pesquisa
+              <img src="./img/pesquisa.png" width="20px" alt="">
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!--Conteúdo Inicia Aqui-->
+      <div class="container-fluid">
+        <div class="row mx-1">
+          <h2 class="col-md-8">Cadastro de Contratos</h2>
+          <div class="col-md-4">
+            <button type="button" class="btn btn-success salvar float-right"><i class="fas fa-check"></i>Salvar</button>
+          </div>
+        </div>
+          
+        <form>
+          <div class="form-row row align-items-center">
+            <div class="form-group col-md-3">
+              <input type="text" class="form-control"  placeholder="Id Funcionário">
+            </div>
+            <div class="form-group col-md-3">
+              <input type="text" class="form-control"  placeholder="Id Cliente/Imóvel/Funcionário">
+            </div>
+            <div class="form-group col-md-3">
+              <div class="dates">
+                <input type="data-date-format" class="form-control datepicker" placeholder="Dt. Validade (Contrato)">
+              </div>
+            </div>
+          </div>
+        
+          <div class="row">
+            <div class="form-group col-md-12">
+              <label for="Textarea">Cláusulas</label>
+              <textarea class="form-control" id="Textarea" rows="10"></textarea>
+            </div>
+          </div>  
+        </form>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+   <!--Datepicker Script-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+   <script>
+      $('.datepicker').datepicker({
+         weekStart: 1,
+         daysOfWeekHighlighted: "6,0",
+         autoclose: true,
+         todayHighlight: true,
+       });
+   </script>
+
+</body>
+
+</html>

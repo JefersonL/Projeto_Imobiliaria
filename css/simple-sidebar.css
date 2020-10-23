@@ -1,0 +1,121 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/templates/simple-sidebar)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+
+ #wrapper {
+    overflow-x: hidden;
+    
+ }
+/* Menu */
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  background-color: rgba(159, 13, 238, 0.8);
+}
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem; 
+}
+/* Navegação */
+nav {
+  background-color: rgba(159, 13, 238, 0.8);
+}
+nav img {
+  margin-left: 0.1rem;
+}
+.escdMenu{  
+  background-color: rgba(159, 13, 238, 0.8);
+  color: aliceblue;
+  border-color: aliceblue;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.escdMenu:hover {
+  background-color: white;
+  color: rgb(161,13,238);
+}
+.escdMenu:focus {
+     box-shadow: none;
+}
+.salvar {
+  width: 6rem;
+  margin-top: 0.6rem;
+}
+.salvar  i {
+  padding-right: 0.5rem;
+}
+.nav-icons{
+  color: aliceblue;
+  font-weight: 500;
+}
+.nav-icons a {
+  color: aliceblue;
+  font-weight: 500;
+  padding: 0.3rem;
+}
+.nav-icons a:hover {
+  color: aliceblue;
+}
+.nav-icons a:focus {
+  box-shadow: none;
+}
+.pesq {
+ margin-right: 1rem;
+}
+.log {
+ margin-left: 1rem;
+}
+
+/* Itens Menu */
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+.list-group .active {
+  color: rgb(161,13,238);
+  background-color: aliceblue;
+  border-color: rgb(161,13,238);
+} 
+.list-group-item {
+  font-size: 1.3rem;
+  color: aliceblue;
+  font-weight: 600;
+  background-color: rgba(159, 13, 238, 0.8);
+  border-color: rgba(240, 248, 255, 0.897);
+}
+.list-group-item:hover{
+  color: rgb(161,13,238);
+  background-color: aliceblue;
+}
+.list-group-item:focus {
+  color: rgb(161,13,238);
+}
+#page-content-wrapper {
+  min-width: 100vw;
+  background-image: url(../img/fundo.png);
+  background-size: cover;
+}
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}

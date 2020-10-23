@@ -1,0 +1,26 @@
+*Equipe Requisitos
+
+- Angélica
+- Deise
+- Hellen 
+- Arthur
+
+*Equipe Desenvolvimento
+
+- Allan - Clientes/Contrato
+- Alessandra - Acess
+* Gabriel - Funcionários
+* Igor - Agendamento
+- Adisson - Acess
+- Felipe - Imoveis
+
+* Já entregaram
+- Bruno
+- Hellen
+- Deise
+- Arthur
+- Angélica
+- Allan
+- Adisson
+- Alessandra
+- Felipe
